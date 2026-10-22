@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Epoch Distributors provides industrial heaters, thermocouples, and temperature controls with personal service and more than 40 years of experience across northern Indiana and southern Michigan.">
+  <title>Epoch Distributors | Heat • Control • Solutions</title>
+  <style>
+    :root {
+      --red: #e31e2b;
+      --red-dark: #bd1420;
+      --ink: #151719;
+      --slate: #343a40;
+      --muted: #626a72;
+      --pale: #f4f5f6;
+      --line: #dfe2e5;
+      --white: #fff;
+      --radius: 18px;
+      --shadow: 0 16px 40px rgba(15, 20, 25, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--white); font-family: Inter, "Segoe UI", Arial, sans-serif; line-height: 1.55; }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .topline { height: 6px; background: var(--red); }
+    header { background: #fff; border-bottom: 1px solid var(--line); }
+    .nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
+    .mark { width: 57px; height: 57px; border-radius: 50%; background: var(--red); color: #08090a; border: 4px solid var(--ink); display: grid; place-items: center; font-weight: 950; font-size: 19px; letter-spacing: -3px; line-height: 1; flex: 0 0 auto; }
+    .mark span { display: block; transform: translateX(-1px); }
+    .brand-name { font-size: clamp(19px, 2.5vw, 27px); line-height: 1.02; font-weight: 950; letter-spacing: -.8px; }
+    .brand-tag { margin-top: 7px; color: var(--muted); font-size: 11px; letter-spacing: 2.3px; font-weight: 800; }
+    .navlinks { display: flex; align-items: center; gap: 25px; }
+    .navlinks a { font-size: 14px; text-decoration: none; font-weight: 750; }
+    .navlinks a:hover { color: var(--red); }
+    .navlinks .nav-cta { color: white; background: var(--red); padding: 12px 18px; border-radius: 8px; }
+    .navlinks .nav-cta:hover { background: var(--red-dark); color: white; }
+    .hero { position: relative; overflow: hidden; background: var(--ink); color: white; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; min-height: 485px; }
+    .hero-copy { padding: 70px 35px 66px max(0px, calc((100vw - 1160px)/2)); padding-right: 45px; align-self: center; }
+    .eyebrow { text-transform: uppercase; color: var(--red); font-size: 12px; letter-spacing: 2.5px; font-weight: 900; }
+    h1 { font-size: clamp(38px, 5vw, 62px); line-height: .99; letter-spacing: -2px; margin: 17px 0 22px; max-width: 660px; }
+    h1 em { color: var(--red); font-style: normal; }
+    .hero-copy p { max-width: 560px; color: #e0e3e5; font-size: 18px; margin: 0 0 27px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; text-decoration: none; border-radius: 9px; padding: 14px 20px; font-weight: 850; font-size: 14px; transition: transform .15s ease, background .15s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--red); color: white; }
+    .btn-primary:hover { background: var(--red-dark); }
+    .btn-outline { border: 1px solid #737a80; color: white; }
+    .hero-image { min-height: 400px; background: linear-gradient(90deg, rgba(21,23,25,.2), rgba(21,23,25,.04)), url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=85") center/cover; }
+    .proofbar { background: var(--red); color: white; }
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 19px 0; }
+    .proof { display: flex; align-items: center; justify-content: center; gap: 11px; text-align: center; font-weight: 800; font-size: 14px; }
+    .proof strong { font-size: 19px; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 720px; margin: 0 auto 38px; text-align: center; }
+    .section-head h2 { font-size: clamp(30px, 3.8vw, 43px); line-height: 1.08; letter-spacing: -1.3px; margin: 10px 0 13px; }
+    .section-head p { color: var(--muted); margin: 0; font-size: 17px; }
+    .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .product { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: white; box-shadow: 0 6px 22px rgba(15,20,25,.04); display: flex; flex-direction: column; }
+    .product-img { height: 205px; background-size: cover; background-position: center; }
+    .product:nth-child(1) .product-img { background-image: url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=80"); }
+    .product:nth-child(2) .product-img { background-image: url("https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?auto=format&fit=crop&w=900&q=80"); }
+    .product:nth-child(3) .product-img { background-image: url("https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=900&q=80"); }
+    .product-body { padding: 24px; flex: 1; }
+    .product-icon { width: 45px; height: 45px; background: var(--red); color: white; border-radius: 12px; display: grid; place-items: center; font-size: 23px; margin-top: -46px; position: relative; border: 3px solid white; }
+    .product h3 { margin: 15px 0 9px; font-size: 21px; line-height: 1.15; }
+    .product p { color: var(--muted); margin: 0 0 15px; font-size: 15px; }
+    .product ul { padding-left: 18px; margin: 0; color: #353a3f; font-size: 14px; }
+    .product li { margin: 5px 0; }
+    .text-link { display: inline-block; margin-top: 18px; color: var(--red-dark); font-weight: 850; font-size: 14px; text-decoration: none; }
+    .text-link:hover { text-decoration: underline; }
+    .service { background: var(--pale); }
+    .service-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; align-items: center; }
+    .service-photo { min-height: 390px; border-radius: var(--radius); background: url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=85") center/cover; box-shadow: var(--shadow); }
+    .service-copy h2 { font-size: clamp(30px, 3.7vw, 43px); line-height: 1.08; letter-spacing: -1.2px; margin: 12px 0 18px; }
+    .service-copy p { color: var(--muted); font-size: 17px; }
+    .benefits { list-style: none; padding: 0; margin: 25px 0 0; display: grid; gap: 13px; }
+    .benefits li { display: flex; gap: 12px; align-items: flex-start; font-weight: 750; }
+    .check { width: 25px; height: 25px; display: grid; place-items: center; border-radius: 50%; background: #ffe5e7; color: var(--red-dark); flex: 0 0 auto; font-weight: 950; }
+    .callout { background: var(--ink); color: white; }
+    .callout-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 55px; align-items: start; }
+    .callout h2 { font-size: clamp(30px, 3.8vw, 44px); line-height: 1.08; letter-spacing: -1.2px; margin: 10px 0 17px; }
+    .callout-copy p { color: #cdd1d4; font-size: 17px; }
+    .contact-lines { display: grid; gap: 13px; margin: 25px 0; }
+    .contact-line { display: flex; gap: 12px; align-items: center; }
+    .contact-line .symbol { width: 42px; height: 42px; display: grid; place-items: center; background: var(--red); border-radius: 50%; font-size: 19px; flex: 0 0 auto; }
+    .contact-line small { display: block; color: #b8bec3; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+    .contact-line a { font-size: clamp(16px, 2vw, 21px); font-weight: 850; text-decoration: none; overflow-wrap: anywhere; }
+    .contact-line a:hover { color: #ff7a82; }
+    .checklist { background: white; color: var(--ink); border-radius: var(--radius); padding: 30px; }
+    .checklist h3 { margin: 0 0 7px; font-size: 24px; }
+    .checklist > p { color: var(--muted); margin: 0 0 20px; }
+    .specs { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    .spec { border: 1px solid var(--line); border-radius: 10px; padding: 13px; display: flex; gap: 10px; align-items: center; font-weight: 850; }
+    .spec span { color: var(--red); font-size: 19px; }
+    .reassurance { background: #fff1f2; border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; padding: 15px 17px; margin-top: 18px; font-weight: 750; }
+    .reassurance small { display: block; color: var(--muted); font-weight: 500; margin-top: 3px; }
+    .service-area { padding: 45px 0; text-align: center; }
+    .service-area h2 { margin: 0 0 8px; font-size: 25px; }
+    .service-area p { color: var(--muted); margin: 0; }
+    footer { background: #0d0f10; color: #c6cbd0; padding: 24px 0; font-size: 13px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-brand { color: white; font-weight: 900; letter-spacing: 1.5px; }
+    .footer-brand span { color: var(--red); }
+    .made { border: 1px solid #52575c; padding: 6px 10px; border-radius: 6px; color: white; white-space: nowrap; font-weight: 800; }
+    @media (max-width: 850px) {
+      .nav { padding: 16px 0; align-items: flex-start; }
+      .navlinks { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+      .navlinks a:not(.nav-cta) { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-copy { padding: 55px 0; }
+      .hero-image { min-height: 270px; }
+      .products { grid-template-columns: 1fr 1fr; }
+      .product:last-child { grid-column: 1 / -1; }
+      .product:last-child .product-img { height: 240px; }
+      .service-grid, .callout-grid { grid-template-columns: 1fr; gap: 32px; }
+      .service-photo { min-height: 300px; order: 2; }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1160px); }
+      .nav { align-items: center; }
+      .mark { width: 46px; height: 46px; font-size: 16px; }
+      .brand-tag { font-size: 9px; letter-spacing: 1.4px; }
+      .navlinks .nav-cta { padding: 10px 12px; font-size: 12px; }
+      .proof-grid { grid-template-columns: 1fr; gap: 10px; padding: 17px 0; }
+      section { padding: 57px 0; }
+      .products { grid-template-columns: 1fr; }
+      .product:last-child { grid-column: auto; }
+      .product-img, .product:last-child .product-img { height: 205px; }
+      .specs { grid-template-columns: 1fr 1fr; }
+      .checklist { padding: 22px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+    @media print {
+      .navlinks, .actions { display: none; }
+      .hero-grid { min-height: auto; }
+      section { padding: 35px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Epoch Distributors home">
+        <div class="mark"><span>E<br>D</span></div>
+        <div>
+          <div class="brand-name">EPOCH<br>DISTRIBUTORS</div>
+          <div class="brand-tag">HEAT <span style="color:var(--red)">•</span> CONTROL <span style="color:var(--red)">•</span> SOLUTIONS</div>
+        </div>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#service">Why Epoch</a>
+        <a class="nav-cta" href="#contact">Talk to David <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Your local industrial heating resource</div>
+          <h1>Heat. Control.<br><em>Solutions.</em></h1>
+          <p>Reliable heaters, thermocouples, and temperature controls—backed by personal service and more than 40 years of experience.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+15743608112">☎ &nbsp; Call David: 574-360-8112</a>
+            <a class="btn btn-outline" href="#products">Explore Products ↓</a>
+          </div>
+        </div>
+        <div class="hero-image" role="img" aria-label="Industrial equipment and manufacturing environment"></div>
+      </div>
+    </div>
+
+    <div class="proofbar">
+      <div class="wrap proof-grid">
+        <div class="proof"><strong>40+</strong> years of experience</div>
+        <div class="proof">● &nbsp; Personal, knowledgeable service</div>
+        <div class="proof">● &nbsp; Local support you can count on</div>
+      </div>
+    </div>
+
+    <section id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we help you heat and control</div>
+          <h2>Industrial products. Practical answers.</h2>
+          <p>Whether you know the exact part you need or just have a heater to identify, Epoch can help you find a solution.</p>
+        </div>
+        <div class="products">
+          <article class="product">
+            <div class="product-img" role="img" aria-label="Industrial manufacturing equipment"></div>
+            <div class="product-body">
+              <div class="product-icon" aria-hidden="true">♨</div>
+              <h3>Plastic Processing Heaters</h3>
+              <p>Heating solutions for injection molding machines and other plastic processing equipment.</p>
+              <ul>
+                <li>Band heaters</li>
+                <li>Cartridge heaters</li>
+                <li>Nozzle heaters and more</li>
+              </ul>
+              <a class="text-link" href="#contact">Ask about a heater →</a>
+            </div>
+          </article>
+          <article class="product">
+            <div class="product-img" role="img" aria-label="Roof and building exterior in winter"></div>
+            <div class="product-body">
+              <div class="product-icon" aria-hidden="true">⌂</div>
+              <h3>Roof, Gutter, Eave & Drain Heating</h3>
+              <p>Heat-trace and de-icing solutions designed to help protect buildings from ice and snow buildup.</p>
+              <ul>
+                <li>Roof and gutter applications</li>
+                <li>Eaves and downspouts</li>
+                <li>Drainage areas</li>
+              </ul>
+              <a class="text-link" href="#contact">Discuss your application →</a>
+            </div>
+          </article>
+          <article class="product">
+            <div class="product-img" role="img" aria-label="Industrial temperature measurement equipment"></div>
+            <div class="product-body">
+              <div class="product-icon" aria-hidden="true">♧</div>
+              <h3>Thermocouples & Temperature Controls</h3>
+              <p>Temperature measurement and control components to help keep your process running consistently.</p>
+              <ul>
+                <li>Thermocouples and sensors</li>
+                <li>Temperature controllers</li>
+                <li>Process control solutions</li>
+              </ul>
+              <a class="text-link" href="#contact">Find the right component →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="wrap service-grid">
+        <div class="service-photo" role="img" aria-label="Industrial production and engineering workspace"></div>
+        <div class="service-copy">
+          <div class="eyebrow">A refresh of the way we do business—not who we are</div>
+          <h2>Old-school service.<br>Modern solutions.</h2>
+          <p>For more than four decades, Epoch Distributors has focused on helping customers solve real heating and temperature-control problems. You can talk with a knowledgeable person, explain what you have, and work through the options together.</p>
+          <ul class="benefits">
+            <li><span class="check">✓</span><span>Personal help from David Ponder</span></li>
+            <li><span class="check">✓</span><span>Practical guidance when you’re not sure what part you need</span></li>
+            <li><span class="check">✓</span><span>Serving manufacturers and businesses across northern Indiana and southern Michigan</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout" id="contact">
+      <div class="wrap callout-grid">
+        <div class="callout-copy">
+          <div class="eyebrow">Let's solve it together</div>
+          <h2>Need help identifying a heater?</h2>
+          <p>If you’re calling about a heater, a few details can help us narrow down the right replacement. Don’t have all the information? That’s okay—we can help figure it out with you.</p>
+          <div class="contact-lines">
+            <div class="contact-line">
+              <div class="symbol" aria-hidden="true">☎</div>
+              <div><small>Call David Ponder · Sales Representative</small><a href="tel:+15743608112">574-360-8112</a></div>
+            </div>
+            <div class="contact-line">
+              <div class="symbol" aria-hidden="true">✉</div>
+              <div><small>Email</small><a href="mailto:epochdist@ameritech.net">epochdist@ameritech.net</a></div>
+            </div>
+          </div>
+          <a class="btn btn-primary" href="mailto:epochdist@ameritech.net?subject=Heater%20or%20Temperature%20Control%20Question">Email Epoch Distributors ↗</a>
+        </div>
+        <div class="checklist">
+          <h3>Have these details ready, if possible</h3>
+          <p>When calling about a heater, these specifications are especially helpful:</p>
+          <div class="specs">
+            <div class="spec"><span>◉</span> Diameter</div>
+            <div class="spec"><span>↔</span> Width</div>
+            <div class="spec"><span>ϟ</span> Watts</div>
+            <div class="spec"><span>⏚</span> Volts</div>
+            <div class="spec" style="grid-column:1/-1"><span>⌁</span> Termination (lead wires, connectors, etc.)</div>
+          </div>
+          <div class="reassurance">Missing a measurement? No problem.
+            <small>Call David. Epoch can work through the details with you.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="service-area">
+      <div class="wrap">
+        <h2>Local service across the region</h2>
+        <p>South Bend · Elkhart · Northern Indiana · Southern Michigan</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">EPOCH <span>•</span> DISTRIBUTORS</div>
+      <div>Heat • Control • Solutions &nbsp; | &nbsp; Personal service for 40+ years</div>
+      <div class="made">MADE IN THE USA</div>
+    </div>
+  </footer>
+</body>
+</html>
